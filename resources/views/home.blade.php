@@ -7,6 +7,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Who To Follow !</div>
                 <div class="panel-body">
+                    @if(count($users) < 1)
+                    <div class="alert-danger" style="padding: 20px">You Are The First User Ever So There Are No Other Members To Follow Right Now</div>
+                    @else
                     <table class="col-md-10 col-md-offset-1">
                         <thead>
                             <tr style="align:center">
@@ -39,6 +42,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    @endif
                 </div>
 
             </div>
